@@ -14,9 +14,12 @@ function displayCatagories(data) {
 
         // li.classList.add = "mx-4";
 
-        li.innerHTML = `<a class="nav-link" id="${element.category_name}" aria-current="page" href="#">${element.category_name}</a>`;
+        li.innerHTML = `<a class="nav-link" onclick="working(${element.category_id})" id="${element.category_name}" aria-current="page" href="#">${element.category_name}</a>`;
         listParent.appendChild(li);
     });
 }
 
 fetchCatagory();
+function working(id) {
+    console.log(id + " clicked");
+}

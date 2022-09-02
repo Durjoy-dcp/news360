@@ -14,12 +14,20 @@ function displayCatagories(data) {
 
         // li.classList.add = "mx-4";
 
-        li.innerHTML = `<a class="nav-link" onclick="working(${element.category_id})" id="${element.category_name}" aria-current="page" href="#">${element.category_name}</a>`;
+        li.innerHTML = `<a class="nav-link" onclick="fetchData('${element.category_id}')" id="${element.category_name}" aria-current="page" href="#">${element.category_name}</a>`;
         listParent.appendChild(li);
     });
 }
 
 fetchCatagory();
-function working(id) {
-    console.log(id + " clicked");
+function fetchData(id) {
+    // console.log(id + " clicked");
+    fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
+        .then(res => res.json())
+        .then(data => console.log(data.data))
+        .catch((error) => console.log(error));
+
+}
+const shownews = data => {
+
 }

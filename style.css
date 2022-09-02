@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+
+body {
+    background: #F6F6F6;
+}
+
 .navbar-nav .nav-link.active {
     color: #5D5FEF;
+}
+
+li a {
+    text-decoration: none;
 }

@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/e3e37f78cc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -63,11 +65,73 @@
     <!-- header part stoping  -->
 
 
+
+    <!-- modal part  -->
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora voluptates illum adipisci amet,
+                    sed temporibus facere dolorem quibusdam voluptatum officiis dolor ex nisi debitis provident
+                    repudiandae nam laborum at eligendi labore? Nisi nobis itaque nemo reiciendis, veniam repudiandae
+                    dolorum nesciunt, est beatae aut ab nam fugiat, dicta corrupti. Iste neque doloremque perferendis
+                    obcaecati animi magni nobis soluta libero eum rem nemo inventore voluptate, dolorum velit
+                    consequatur delectus quibusdam, architecto nulla voluptatibus voluptates veniam natus quam et. Quam
+                    impedit ab aliquam, iusto aperiam consequuntur, expedita adipisci harum eius similique ut dicta
+                    asperiores deleniti totam labore! Voluptatem totam adipisci laboriosam, nobis aliquid iste? Atque
+                    vitae ipsam facilis neque molestias possimus laborum voluptatum doloremque non, vero fugiat a nisi.
+                    Nulla tempore assumenda perferendis facilis tenetur quasi, aspernatur, tempora dicta laborum,
+                    dolores necessitatibus vel nesciunt accusantium quibusdam voluptatem praesentium blanditiis alias
+                    sequi? Maxime fugiat iure eos sapiente dicta similique ipsum temporibus quidem sunt libero dolore
+                    laborum corrupti suscipit quis, necessitatibus rerum. Corrupti, non debitis obcaecati optio iusto
+                    totam atque alias, tenetur itaque cumque libero fugiat! Reiciendis voluptatum, quam molestias
+                    doloribus animi aspernatur sit aliquam maxime adipisci natus iste minus quibusdam rerum commodi?
+                    Reprehenderit magni accusamus labore odio numquam quam perferendis aliquid tenetur nobis recusandae
+                    quo nisi, rem quae aspernatur quibusdam. Provident, saepe. Tempora delectus ducimus dolorem autem
+                    consequuntur, cupiditate voluptas magni hic iste, suscipit possimus, molestias quaerat iusto nostrum
+                    provident reprehenderit praesentium? Itaque alias voluptatem explicabo perspiciatis error recusandae
+                    tempore rem eaque ut autem. Officia, accusantium! Quaerat iure molestiae repellat sequi quibusdam
+                    rerum fugit minus ipsum deleniti libero, quasi, magnam, nemo excepturi est vero provident quae
+                    veniam sunt nobis. Inventore rerum, quasi modi doloribus quibusdam fuga dolorum laudantium
+                    obcaecati. Expedita enim iure quo at voluptatibus distinctio omnis tenetur. Expedita sit ullam nemo,
+                    blanditiis ut mollitia? Consequuntur debitis a vitae possimus facilis. Praesentium quisquam
+                    reiciendis ullam quaerat? Architecto repellat error delectus dolorem, maxime quo minima odio nulla
+                    vitae ducimus, enim aperiam a quae harum voluptatum officiis necessitatibus corrupti. Error eum,
+                    consequuntur, delectus deserunt reprehenderit odio ex provident rerum, cum earum laudantium magnam
+                    hic! Sequi, libero, autem, placeat similique dicta nesciunt voluptates non amet animi inventore quam
+                    eos voluptate itaque nostrum vero minima. Nisi harum debitis sunt. Doloribus nam modi mollitia
+                    accusantium soluta! Ducimus, velit, tempore enim sapiente non, tenetur nesciunt rerum dolor nemo
+                    ullam ex quidem. Omnis at alias aperiam quia minima laborum porro ea reprehenderit eius, culpa
+                    sapiente accusamus veritatis placeat fugit vel quos unde aut accusantium harum nemo numquam amet
+                    similique modi! Pariatur, placeat velit delectus provident numquam voluptatem perspiciatis mollitia
+                    excepturi obcaecati sit autem nemo vel vitae modi illum eius ipsa corporis natus. Sunt voluptas
+                    vitae recusandae dolorum porro quas reprehenderit iusto, ea dolor nisi! Fuga, esse numquam vel,
+                    aspernatur eligendi error iure vero officiis architecto unde eos perferendis sed. Sunt officiis quia
+                    ratione quibusdam, exercitationem fuga similique vitae et debitis illo ad? Tempora, tempore sit.
+                    Blanditiis, totam velit! Mollitia deserunt, sequi quod alias odio deleniti beatae inventore.
+                    Temporibus quis beatae omnis ad totam. Ea quod repudiandae culpa reprehenderit dolor fuga excepturi.
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal part stoping  -->
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
     <!-- main section staring  -->
 
     <main class="container">
 
-        <div id="news">
+        <div id="news" class="my-5">
             <div class="card mb-3">
                 <div class="row g-0 rounded">
                     <div class="col-md-4">
@@ -90,8 +154,18 @@
                                             alt="">
                                         <h6 class="">Name is sha</h6>
                                     </div>
-
+                                    <div class="d-flex text-secondary">
+                                        <i class="fa-solid fa-eye me-2"></i>
+                                        <h6>1.5M</h6>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn " data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </button>
+                                    </div>
                                 </div>
+
 
                             </div>
                         </div>

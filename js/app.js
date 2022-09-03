@@ -1,15 +1,15 @@
 // console.log("Its working ");
 let currentId = "";
 let currentIdName = "";
-let value = 0;
-const setValue = (id = 0) => {
+let value = 1;
+const setValue = (id = 1) => {
 
     value = id;
 
     if (value == 1) {
-        document.getElementById('btnGroupDrop1').innerText = "Total view";
-    } else {
         document.getElementById('btnGroupDrop1').innerText = "Default";
+    } else {
+        document.getElementById('btnGroupDrop1').innerText = "Unsorted";
 
     }
     if (currentId != "" && currentIdName != "") {

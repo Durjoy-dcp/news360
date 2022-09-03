@@ -179,8 +179,3 @@ function showModal(element) {
 </div>`;
 
 }
-
-
-function compareview(a, b) {
-    return b.age - a.age;
-}

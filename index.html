@@ -37,7 +37,7 @@
                             <a class="nav-link activeNav" aria-current="page" href="#">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
+                            <a class="nav-link" href="page2.html">Blog</a>
                         </li>
 
 
@@ -50,132 +50,134 @@
     </section>
 
     <!-- navbar part stoping  -->
-
-    <!-- header part starting  -->
-    <header class="container">
-
-
-        <div class="text-secondary">
-            <ul class=" d-md-flex d-sm-block text-center justify-content-between list-unstyled " id="catagory">
-                <li class=" text-secondary mx-4">
-                    <a class=" active" aria-current="page" href="#">Home</a>
-                </li>
+    <main id="main-container">
+        <!-- header part starting  -->
+        <header class="container">
 
 
-
-            </ul>
-        </div>
-
-    </header>
-
-    <!-- header part stoping  -->
-
-
-    <!-- Display the amount of result -->
-    <section class="container d-none bg-white py-3 px-2" id="show-amount">
-        <h4><span id="amount">0</span> items found for category <span id="catagoryName"
-                style="color: rgb(35, 77, 202);"></span></h4>
-    </section>
-
-
-    <!-- ending  -->
-
-    <!-- sorting  -->
-    <section class="container d-flex my-3">
-        <h4 class="me-5">Sort by:
-        </h4>
-        <div class="btn-group" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Select
-            </button>
-            <ul class="dropdown-menu " aria-labelledby="btnGroupDrop1">
-
-                <li onclick="setValue(0)"><a class="dropdown-item" href="#">Default</a></li>
-                <li onclick="setValue(1)"><a class="dropdown-item" href="#">Total view</a></li>
-            </ul>
-
-        </div>
-    </section>
-
-
-    <!-- modal part  -->
+            <div class="text-secondary">
+                <ul class=" d-md-flex d-sm-block text-center justify-content-between list-unstyled " id="catagory">
+                    <li class=" text-secondary mx-4">
+                        <a class=" active" aria-current="page" href="#">Home</a>
+                    </li>
 
 
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modal-body">
-                </div>
+                </ul>
+            </div>
+
+        </header>
+
+        <!-- header part stoping  -->
+
+
+        <!-- Display the amount of result -->
+        <section class="container d-none bg-white py-3 px-2" id="show-amount">
+            <h4><span id="amount">0</span> items found for category <span id="catagoryName"
+                    style="color: rgb(35, 77, 202);"></span></h4>
+        </section>
+
+
+        <!-- ending  -->
+
+        <!-- sorting  -->
+        <section class="container d-flex my-3">
+            <h4 class="me-5">Sort by:
+            </h4>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Select
+                </button>
+                <ul class="dropdown-menu " aria-labelledby="btnGroupDrop1">
+
+                    <li onclick="setValue(0)"><a class="dropdown-item" href="#">Default</a></li>
+                    <li onclick="setValue(1)"><a class="dropdown-item" href="#">Total view</a></li>
+                </ul>
 
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- modal part stoping  -->
-    <!-- Button trigger modal -->
 
-    <!-- Modal -->
-    <!-- main section staring  -->
+        <!-- modal part  -->
 
-    <main class="container">
 
-        <div class="my-5">
-            <div class="card mb-3 " id="news">
-                <div class="row g-0 rounded">
-                    <div class="col-md-4">
-                        <img src="https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png"
-                            class="img-fluid rounded-start" alt="...">
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text text-secondary">This is a wider card with supporting text below as a
-                                natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <div>
+                    <div class="modal-body" id="modal-body">
+                    </div>
 
-                                <div class="d-flex justify-content-between">
+                </div>
+            </div>
+        </div>
 
-                                    <div class="d-flex align-items-center">
-                                        <img class="author-img me-3"
-                                            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                                            alt="">
-                                        <h6 class="">Name is sha</h6>
+        <!-- modal part stoping  -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <!-- body section staring  -->
+
+        <section class="container">
+
+            <div class="my-5">
+                <div class="card mb-3 " id="news">
+                    <div class="row g-0 rounded">
+                        <div class="col-md-4">
+                            <img src="https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png"
+                                class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-secondary">This is a wider card with supporting text below as a
+                                    natural lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div>
+
+                                    <div class="d-flex justify-content-between">
+
+                                        <div class="d-flex align-items-center">
+                                            <img class="author-img me-3"
+                                                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+                                                alt="">
+                                            <h6 class="">Name is sha</h6>
+                                        </div>
+                                        <div class="d-flex text-secondary">
+                                            <i class="fa-solid fa-eye me-2"></i>
+                                            <h6>1.5M</h6>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn " data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="d-flex text-secondary">
-                                        <i class="fa-solid fa-eye me-2"></i>
-                                        <h6>1.5M</h6>
-                                    </div>
-                                    <div>
-                                        <button type="button" class="btn " data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal">
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </button>
-                                    </div>
+
+
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
+
+
+        </section>
+
+
+        <!-- body section stoping  -->
 
 
     </main>
-
-
-    <!-- main section stoping  -->
-
 
     <!-- bootstrap part  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

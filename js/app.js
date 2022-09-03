@@ -111,12 +111,12 @@ const shownews = (data, id) => {
                         <img class="author-img me-3"
                             src="${element.author.img}"
                             alt="">
-                        <h6 class="">${(element.author.name == null || element.author.name == "") ? 'Information not found' : element.author.name}</h6>
+                        <h6 class="">${(element.author.name == null || element.author.name == "") ? 'No Data Available' : element.author.name}</h6>
                     </div>
                     <div  class="d-flex align-items-center justify-content-between">
                     <div class="d-flex text-secondary">
                         <i class="fa-solid fa-eye me-2"></i>
-                        <h6>${(element.total_view == null || element.total_view == "") ? 'Information not found' : element.total_view}</h6>
+                        <h6>${(element.total_view == null || element.total_view == "") ? 'No Data Available' : element.total_view}</h6>
                     </div>
                     <div>
                         <button onclick="fetchForModal('${element._id}')" type="button" class="btn " data-bs-toggle="modal"
@@ -142,7 +142,7 @@ function fetchForModal(id) {
     fetch(`https://openapi.programming-hero.com/api/news/${id}`)
         .then(res => res.json())
         .then(data => showModal(data.data[0]))
-    // .catch((error) => console.log(error));
+        .catch((error) => console.log(error));
 
 }
 function showModal(element) {
@@ -165,11 +165,11 @@ function showModal(element) {
 
                 <div class="d-flex  align-items-center">
                  
-                    <h6 class="">Author : ${(element.author.name == null || element.author.name == "") ? 'Information not found' : element.author.name}</h6>
+                    <h6 class="">Author : ${(element.author.name == null || element.author.name == "") ? 'No Data Available' : element.author.name}</h6>
                 </div>
                 <div class="d-flex text-secondary">
                     <i class="fa-solid fa-eye me-2"></i>
-                    <h6>${(element.total_view == null || element.total_view == "") ? 'Information not found' : element.total_view}</h6>
+                    <h6>${(element.total_view == null || element.total_view == "") ? 'No Data Available' : element.total_view}</h6>
                 </div>
          
             </div>

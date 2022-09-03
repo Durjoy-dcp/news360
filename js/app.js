@@ -30,12 +30,12 @@ function fetchData(id, docId) {
     // console.log(id + " clicked");
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
         .then(res => res.json())
-        .then(data => shownews(data.data))
+        .then(data => shownews(data.data, docId))
         .catch((error) => console.log(error));
 
 }
 const shownews = (data, id) => {
-
+    console.log(data);
 
     const newsContainer = document.getElementById('news');
     newsContainer.innerHTML = ``;
@@ -43,6 +43,12 @@ const shownews = (data, id) => {
         newsContainer.innerHTML = `<h2 class="text-center py-2 text-danger">No news Found !!!</h2>`;
 
     }
+    const amount = document.getElementById('amount')
+    amount.innerText = data.length;
+    console.log(amount.parentNode.parentNode);
+    document.getElementById('show-amount').classList.remove('d-none');
+    document.getElementById('catagoryName').innerText = id;
+
     console.log(data);
     data.forEach(element => {
 

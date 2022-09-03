@@ -5,12 +5,13 @@ body {
     background: #F6F6F6;
 }
 
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.activeNav {
     color: #5D5FEF;
 }
 
 li a {
     text-decoration: none;
+    color: gray;
 }
 
 .author-img {

@@ -44,6 +44,7 @@ function displayCatagories(data) {
 
 fetchCatagory();
 function fetchData(id, docId) {
+    spinnerLoad(true);
     currentId = id;
     currentIdName = docId;
     console.log(currentId, currentIdName);
@@ -135,7 +136,7 @@ const shownews = (data, id) => {
     });
 
 
-
+    spinnerLoad(false);
 }
 function fetchForModal(id) {
     fetch(`https://openapi.programming-hero.com/api/news/${id}`)
@@ -178,4 +179,13 @@ function showModal(element) {
     </div>
 </div>`;
 
+}
+
+function spinnerLoad(ok) {
+    if (ok) {
+        document.getElementById('spinner').classList.remove('d-none');
+    } else {
+
+        document.getElementById('spinner').classList.add('d-none');
+    }
 }

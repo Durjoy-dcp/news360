@@ -1,4 +1,7 @@
 // console.log("Its working ");
+let value = 0;
+const setValue = (id = 0) => value = id;
+
 
 const fetchCatagory = () => {
     fetch('https://openapi.programming-hero.com/api/news/categories')
@@ -35,7 +38,7 @@ function fetchData(id, docId) {
 
 }
 const shownews = (data, id) => {
-    console.log(data);
+
 
     const newsContainer = document.getElementById('news');
     newsContainer.innerHTML = ``;
@@ -49,9 +52,12 @@ const shownews = (data, id) => {
     document.getElementById('show-amount').classList.remove('d-none');
     document.getElementById('catagoryName').innerText = id;
 
-    console.log(data);
-    data.forEach(element => {
 
+    if (value == 1) {
+        data = data.sort((a, b) => b.total_view - a.total_view);
+    }
+    data.forEach(element => {
+        console.log(element);
 
         let detail = element.details;
 
@@ -81,12 +87,12 @@ const shownews = (data, id) => {
                         <img class="author-img me-3"
                             src="${element.author.img}"
                             alt="">
-                        <h6 class="">${element.author.name === (null || "") ? 'Information not found' : element.author.name}</h6>
+                        <h6 class="">${(element.author.name == null || element.author.name == "") ? 'Information not found' : element.author.name}</h6>
                     </div>
                     <div  class="d-flex align-items-center justify-content-between">
                     <div class="d-flex text-secondary">
                         <i class="fa-solid fa-eye me-2"></i>
-                        <h6>${element.total_view === (null || "") ? 'Information not found' : element.total_view}</h6>
+                        <h6>${(element.total_view == null || element.total_view == "") ? 'Information not found' : element.total_view}</h6>
                     </div>
                     <div>
                         <button onclick="fetchForModal('${element._id}')" type="button" class="btn " data-bs-toggle="modal"
@@ -135,11 +141,11 @@ function showModal(element) {
 
                 <div class="d-flex  align-items-center">
                  
-                    <h6 class="">Author : ${element.author.name === (null || "") ? 'Information not found' : element.author.name}</h6>
+                    <h6 class="">Author : ${(element.author.name == null || element.author.name == "") ? 'Information not found' : element.author.name}</h6>
                 </div>
                 <div class="d-flex text-secondary">
                     <i class="fa-solid fa-eye me-2"></i>
-                    <h6>${element.total_view === (null || "") ? 'Information not found' : element.total_view}</h6>
+                    <h6>${(element.total_view == null || element.total_view == "") ? 'Information not found' : element.total_view}</h6>
                 </div>
          
             </div>

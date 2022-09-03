@@ -7,7 +7,7 @@ const fetchCatagory = () => {
         .catch((error) => console.log(error));
 }
 function displayCatagories(data) {
-    console.log(data);
+
     const listParent = document.getElementById("catagory");
     data.forEach(element => {
         const li = document.createElement('li');
@@ -24,7 +24,7 @@ function fetchData(id, docId) {
     const current = document.getElementsByClassName('active');
     if (current.length > 0) {
         current[0].className = current[0].className.replace("active", "");
-        console.log("working");
+
     }
     document.getElementById(docId).classList.add("active");
     // console.log(id + " clicked");
@@ -45,6 +45,7 @@ const shownews = (data, id) => {
     }
     data.forEach(element => {
         console.log(element);
+
         let detail = element.details;
 
         detail = detail.split(" ");
@@ -77,7 +78,7 @@ const shownews = (data, id) => {
                     </div>
                     <div class="d-flex text-secondary">
                         <i class="fa-solid fa-eye me-2"></i>
-                        <h6>1.5M</h6>
+                        <h6>${element.total_view === null ? 'Information not found' : element.total_view}</h6>
                     </div>
                     <div>
                         <button type="button" class="btn " data-bs-toggle="modal"

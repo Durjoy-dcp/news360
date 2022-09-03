@@ -1,6 +1,25 @@
 // console.log("Its working ");
+let currentId = "";
+let currentIdName = "";
 let value = 0;
-const setValue = (id = 0) => value = id;
+const setValue = (id = 0) => {
+
+    value = id;
+
+    if (value == 1) {
+        document.getElementById('btnGroupDrop1').innerText = "Total view";
+    } else {
+        document.getElementById('btnGroupDrop1').innerText = "Default";
+
+    }
+    if (currentId != "" && currentIdName != "") {
+
+        fetchData(currentId, currentIdName);
+        console.log(currentId, currentIdName);
+    }
+
+
+}
 
 
 const fetchCatagory = () => {
@@ -17,6 +36,7 @@ function displayCatagories(data) {
         li.classList.add('text-secondary');
         // li.classList.add = "mx-4";
 
+
         li.innerHTML = `<a class="" onclick="fetchData('${element.category_id}','${element.category_name}')" id="${element.category_name}" aria-current="page" href="#">${element.category_name}</a>`;
         listParent.appendChild(li);
     });
@@ -24,6 +44,9 @@ function displayCatagories(data) {
 
 fetchCatagory();
 function fetchData(id, docId) {
+    currentId = id;
+    currentIdName = docId;
+    console.log(currentId, currentIdName);
     const current = document.getElementsByClassName('active');
     if (current.length > 0) {
         current[0].className = current[0].className.replace("active", "");
@@ -57,7 +80,7 @@ const shownews = (data, id) => {
         data = data.sort((a, b) => b.total_view - a.total_view);
     }
     data.forEach(element => {
-        console.log(element);
+        // console.log(element);
 
         let detail = element.details;
 

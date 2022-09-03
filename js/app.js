@@ -15,7 +15,7 @@ const setValue = (id = 1) => {
     if (currentId != "" && currentIdName != "") {
 
         fetchData(currentId, currentIdName);
-        console.log(currentId, currentIdName);
+        // console.log(currentId, currentIdName);
     }
 
 
@@ -47,7 +47,7 @@ function fetchData(id, docId) {
     spinnerLoad(true);
     currentId = id;
     currentIdName = docId;
-    console.log(currentId, currentIdName);
+    // console.log(currentId, currentIdName);
     const current = document.getElementsByClassName('active');
     if (current.length > 0) {
         current[0].className = current[0].className.replace("active", "");
@@ -72,7 +72,7 @@ const shownews = (data, id) => {
     }
     const amount = document.getElementById('amount')
     amount.innerText = data.length;
-    console.log(amount.parentNode.parentNode);
+    // console.log(amount.parentNode.parentNode);
     document.getElementById('show-amount').classList.remove('d-none');
     document.getElementById('catagoryName').innerText = id;
 
@@ -149,7 +149,7 @@ function showModal(element) {
 
 
 
-    console.log(element);
+    // console.log(element);
     const id = document.getElementById('modal-body');
     id.innerHTML = ` <div class=" col-12 d-flex justify-content-center">
     <img src="${element.image_url}"

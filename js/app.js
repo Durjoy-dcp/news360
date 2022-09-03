@@ -43,8 +43,9 @@ const shownews = (data, id) => {
         newsContainer.innerHTML = `<h2 class="text-center py-2 text-danger">No news Found !!!</h2>`;
 
     }
+    console.log(data);
     data.forEach(element => {
-        console.log(element);
+
 
         let detail = element.details;
 
@@ -68,23 +69,25 @@ const shownews = (data, id) => {
             <p class="card-text text-secondary ">${detail}</p>
             <div>
 
-                <div class="d-flex justify-content-between">
+                <div class="d-md-flex d-sm-block   justify-content-between">
 
-                    <div class="d-flex  align-items-center">
+                    <div class="d-flex my-4  align-items-center">
                         <img class="author-img me-3"
                             src="${element.author.img}"
                             alt="">
-                        <h6 class="">${element.author.name === null ? 'Information not found' : element.author.name}</h6>
+                        <h6 class="">${element.author.name === (null || "") ? 'Information not found' : element.author.name}</h6>
                     </div>
+                    <div  class="d-flex align-items-center justify-content-between">
                     <div class="d-flex text-secondary">
                         <i class="fa-solid fa-eye me-2"></i>
-                        <h6>${element.total_view === null ? 'Information not found' : element.total_view}</h6>
+                        <h6>${element.total_view === (null || "") ? 'Information not found' : element.total_view}</h6>
                     </div>
                     <div>
-                        <button type="button" class="btn " data-bs-toggle="modal"
+                        <button onclick="fetchForModal('${element._id}')" type="button" class="btn " data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
+                    </div>
                     </div>
                 </div>
 
@@ -92,9 +95,52 @@ const shownews = (data, id) => {
             </div>
         </div>
     </div>`;
+
         newsContainer.appendChild(div);
     });
 
 
+
+}
+function fetchForModal(id) {
+    fetch(`https://openapi.programming-hero.com/api/news/${id}`)
+        .then(res => res.json())
+        .then(data => showModal(data.data[0]))
+    // .catch((error) => console.log(error));
+
+}
+function showModal(element) {
+
+
+
+    console.log(element);
+    const id = document.getElementById('modal-body');
+    id.innerHTML = ` <div class=" col-12 d-flex justify-content-center">
+    <img src="${element.image_url}"
+        class="img-fluid rounded   alt="...">
+</div>
+<div class="col-12">
+    <div class="card-body my-5 px-5">
+        <h5 class="card-title  ">${element.title}</h5>
+        <p class="card-text text-secondary ">${element.details}</p>
+        <div>
+
+            <div class="d-flex justify-content-between">
+
+                <div class="d-flex  align-items-center">
+                 
+                    <h6 class="">Author : ${element.author.name === (null || "") ? 'Information not found' : element.author.name}</h6>
+                </div>
+                <div class="d-flex text-secondary">
+                    <i class="fa-solid fa-eye me-2"></i>
+                    <h6>${element.total_view === (null || "") ? 'Information not found' : element.total_view}</h6>
+                </div>
+         
+            </div>
+
+
+        </div>
+    </div>
+</div>`;
 
 }
